@@ -1,0 +1,40 @@
+buildscript {
+    dependencies {
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    println System.properties['java.home']
+}
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls', 'javafx.fxml']
+    mainClassName = "com.wiseassblog.sudoku.Main"
+
+}
+
+group 'com.wiseassblog'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+
+
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+}
