@@ -41,6 +41,7 @@ public class GameLogicTest {
         for(int i = 0; i < oldArray.length - 1; i++)
         {
             Assertions.assertArrayEquals(newArray[i],newSudokuArray[i]);
+            Assertions.assertArrayEquals(oldArray[i],newSudokuArray[i]);
         }
     }
 
