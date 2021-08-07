@@ -28,7 +28,7 @@ public class SudokuSolver {
      * 4.In case a: if the current cell was the last enumerated one, then the puzzle is solved.
      * If not, then go back to step 2 with the “current cell” being the next cell.
      * In case b: if the current cell is the first cell in the enumeration, then the Sudoku puzzle does not have a solution.
-     * If not, then erase the 9 from the corrent cell, call the previous cell in the enumeration the new “current cell”, and
+     * If not, then erase the 9 from the current cell, call the previous cell in the enumeration the new “current cell”, and
      * continue with step 3.
      */
     public static boolean puzzleIsSolvable(int[][] puzzle) {

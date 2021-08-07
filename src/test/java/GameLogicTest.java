@@ -1,5 +1,7 @@
 import com.wissassblog.sudoku.computationlogic.GameLogic;
+import com.wissassblog.sudoku.computationlogic.SudokuUtilities;
 import com.wissassblog.sudoku.constants.GameState;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -27,6 +29,19 @@ public class GameLogicTest {
                         TestData.getValidStart().getCopyOfGridState()
                 )
         );
+    }
+
+    @Test
+    public void canCopyArrayValuesCorrectly()
+    {
+        int[][] oldArray = TestData.getInvalid().getCopyOfGridState();
+        int[][] newArray = SudokuUtilities.copyToNewArray(oldArray);
+        int[][] newSudokuArray = new int[9][9];
+       SudokuUtilities.copySudokuArrayValues(oldArray,newSudokuArray);
+        for(int i = 0; i < oldArray.length - 1; i++)
+        {
+            Assertions.assertArrayEquals(newArray[i],newSudokuArray[i]);
+        }
     }
 
     /**

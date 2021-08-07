@@ -1,7 +1,6 @@
 package com.wissassblog.sudoku.userinterface;
 
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 
 public class SudokuTextField extends TextField {
     private final int x;
